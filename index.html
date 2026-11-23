@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibrahima Kan - Portfolio BTS SIO SLAM</title>
+<meta name="description" content="Portfolio d'Ibrahima Kan, étudiant en BTS SIO option SLAM">
+<style>
+:root {
+  --bg: #f6f8fb; --card: #ffffff; --text: #1e293b; --muted: #64748b;
+  --dark: #0f172a; --accent: #4f46e5; --accent2: #06b6d4; --line: #e2e8f0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
+a { color: var(--accent); }
+
+/* Barre de navigation */
+nav { position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,.95); padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; }
+nav a { color: #cbd5e1; text-decoration: none; font-size: .92rem; }
+nav a:hover { color: #fff; }
+
+/* Bandeau d'accueil */
+.hero { background: linear-gradient(135deg, var(--dark), #1e1b4b 60%, #155e75); color: #fff; text-align: center; padding: 80px 20px 70px; }
+.hero h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -1px; }
+.hero .role { margin: 10px 0 24px; font-size: 1.15rem; color: #bae6fd; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; }
+.chip { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); padding: 4px 14px; border-radius: 999px; font-size: .85rem; }
+
+.btn { display: inline-block; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 4px; background: linear-gradient(90deg, var(--accent), var(--accent2)); color: #fff; }
+.btn.clair { background: transparent; border: 1px solid rgba(255,255,255,.5); }
+.btn:hover { filter: brightness(1.12); }
+
+main { max-width: 1000px; margin: 0 auto; padding: 10px 20px 40px; }
+section { padding: 50px 0 10px; }
+h2 { font-size: 1.7rem; margin: 0 0 6px; }
+h2::after { content: ""; display: block; width: 56px; height: 4px; border-radius: 4px; margin-top: 8px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.sous-titre { color: var(--muted); margin: 8px 0 24px; }
+
+.grille { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.carte { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; box-shadow: 0 4px 14px rgba(15,23,42,.05); transition: transform .2s, box-shadow .2s; }
+.carte:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(15,23,42,.1); }
+.carte h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.date { color: var(--muted); font-size: .85rem; }
+
+.tag { display: inline-block; background: #eef2ff; color: var(--accent); font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; margin: 8px 6px 0 0; }
+
+/* Frise chronologique */
+.frise { border-left: 3px solid var(--line); margin-left: 8px; padding-left: 24px; }
+.frise .etape { position: relative; margin-bottom: 22px; }
+.frise .etape::before { content: ""; position: absolute; left: -33px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); }
+.frise h3 { margin: 0; font-size: 1.05rem; }
+.frise p { margin: 4px 0 0; }
+
+details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 20px; margin-top: 18px; }
+summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+details h3 { margin-bottom: 4px; }
+
+ul.coches { list-style: none; padding: 0; }
+ul.coches li::before { content: "✓ "; color: var(--accent2); font-weight: 700; }
+
+footer { text-align: center; color: var(--muted); padding: 30px 20px; border-top: 1px solid var(--line); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#apropos">À propos</a>
+  <a href="#parcours">Parcours</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projets">Projets</a>
+  <a href="#stage">Stage</a>
+  <a href="#e5">E5</a>
+  <a href="#veille">Veille</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <h1>Ibrahima Kan</h1>
+  <p class="role">Étudiant en BTS SIO option SLAM · Développement d'applications</p>
+  <div class="chips">
+    <span class="chip">2<sup>e</sup> année · 2025 - 2027</span>
+    <span class="chip">Campus Charles de Foucauld, Paris</span>
+    <span class="chip">Java · PHP · Laravel · SQL</span>
+  </div>
+  <a class="btn" href="#contact">Me contacter</a>
+</header>
+
+<main>
+
+<section id="apropos">
+  <h2>À propos</h2>
+  <p class="sous-titre">Qui je suis et ce que je cherche.</p>
+  <div class="carte">
+    <p>Je suis étudiant en 2<sup>e</sup> année de BTS Services Informatiques aux Organisations, option SLAM (Solutions Logicielles et Applications Métiers). J'apprends à concevoir des applications : modéliser une base de données, programmer en Java et en PHP, travailler en équipe avec Git.</p>
+    <p>Mes trois stages m'ont fait découvrir le métier de développeur web. Je suis curieux, sérieux, et j'apprends mieux en réalisant des projets concrets.</p>
+  </div>
+</section>
+
+<section id="parcours">
+  <h2>Parcours</h2>
+  <p class="sous-titre">Formation et expériences.</p>
+  <div class="frise">
+    <div class="etape"><h3>BTS SIO option SLAM</h3><span class="date">2025 - 2027 · en cours</span>
+      <p>Développement d'applications (PHP, Java), bases de données (MCD, SQL), projets en groupe avec Git et GitHub.</p></div>
+    <div class="etape"><h3>Stage chez Vaadigm Studio</h3><span class="date">Mai - juin 2026</span>
+      <p>Agence web à Paris : observation de la création d'un site, puis réalisation de mon propre site.</p></div>
+    <div class="etape"><h3>Baccalauréat Systèmes Numériques</h3><span class="date">2024 · mention bien</span>
+      <p>Réseaux, maintenance et bases de l'informatique.</p></div>
+    <div class="etape"><h3>Stage chez Eliott &amp; Markus</h3><span class="date">Mars - avril 2024</span>
+      <p>Agence de communication digitale : projet personnel de site internet et observation des projets clients.</p></div>
+    <div class="etape"><h3>Stage chez Ticketmaster</h3><span class="date">Mars - avril 2023</span>
+      <p>Découverte d'un service de billetterie, de ses outils numériques et du travail en équipe.</p></div>
+  </div>
+</section>
+
+<section id="competences">
+  <h2>Compétences</h2>
+  <p class="sous-titre">Ce que j'ai pratiqué en formation et en stage.</p>
+  <div class="grille">
+    <div class="carte"><h3>Développement</h3>
+      <span class="tag">Java (POO)</span><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">HTML / CSS</span><span class="tag">Python (bases)</span></div>
+    <div class="carte"><h3>Données</h3>
+      <span class="tag">MCD (Merise)</span><span class="tag">SQL</span><span class="tag">Base de données</span></div>
+    <div class="carte"><h3>Outils</h3>
+      <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Pull request</span><span class="tag">WordPress</span><span class="tag">OVH</span></div>
+    <div class="carte"><h3>Langues et qualités</h3>
+      <span class="tag">Français (natif)</span><span class="tag">Anglais (intermédiaire)</span><span class="tag">Travail en équipe</span><span class="tag">Sérieux</span></div>
+  </div>
+</section>
+
+<section id="projets">
+  <h2>Projets</h2>
+  <p class="sous-titre">Deux projets réalisés en groupe pendant le BTS.</p>
+  <div class="grille">
+    <div class="carte">
+      <h3>M2L - Gestion du personnel des ligues</h3>
+      <p>Application en ligne de commande pour gérer les employés des ligues de la Maison des Ligues de Lorraine, avec une base de données et trois niveaux d'habilitation. <strong>Ma partie : le MCD et le script SQL de création des tables.</strong></p>
+      <span class="tag">Java</span><span class="tag">Base de données</span><span class="tag">Architecture 3-tiers</span><span class="tag">Git</span>
+      <p><a class="btn" href="projet-m2l.html">Voir le projet</a></p>
+    </div>
+    <div class="carte">
+      <h3>AP7 - Parking</h3>
+      <p>Application web de gestion de parking réalisée avec le framework Laravel.</p>
+      <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">Travail en groupe</span>
+    </div>
+  </div>
+</section>
+
+<section id="stage">
+  <h2>Stage chez Vaadigm Studio</h2>
+  <p class="sous-titre">Agence web créative à Paris · un mois.</p>
+  <div class="carte">
+    <p>J'ai d'abord observé comment l'équipe crée un site web, de la conception à la mise en ligne. Ensuite, j'ai réalisé mon propre site avec WordPress et l'hébergement OVH, avec l'aide de mon maître de stage. Ce stage m'a confirmé que je veux continuer dans le développement web.</p>
+    <a class="btn" href="https://vaadigm.studio" target="_blank" rel="noopener">Site de Vaadigm Studio</a>
+  </div>
+
+  <details>
+    <summary>Lire mon rapport de stage</summary>
+
+    <h3>Remerciements</h3>
+    <p>Je tiens tout d'abord à remercier Nataniel, mon maître de stage, pour m'avoir accordé sa confiance et pour sa disponibilité tout au long de ces quatre semaines. Ses conseils ont été précieux et m'ont permis de progresser rapidement.</p>
+    <p>Je remercie également toute l'équipe de Vaadigm Studio pour leur accueil chaleureux et leur bonne humeur au quotidien. Travailler dans une équipe aussi soudée et bienveillante est une chance, et j'en suis pleinement conscient.</p>
+    <p>Enfin, je remercie mon établissement pour m'avoir préparé à vivre cette première expérience professionnelle dans de bonnes conditions.</p>
+
+    <h3>1. Introduction</h3>
+    <p>Dans le cadre de ma deuxième année de BTS Services Informatiques aux Organisations, option SLAM, j'ai effectué un stage d'un mois au sein de l'agence web Vaadigm Studio, basée à Paris.</p>
+    <p>Ce stage avait pour objectif de me confronter au monde professionnel du développement web, de mettre en pratique les connaissances acquises en cours, mais aussi d'apprendre des choses que l'école ne peut pas toujours enseigner : le rythme de travail en équipe, les exigences d'un projet réel, la communication avec des collègues expérimentés.</p>
+    <p>J'ai choisi Vaadigm Studio parce que cette agence correspond à ce qui m'attire dans le développement web : la créativité, la technique, et un environnement humain à taille réduite où chaque personne a un rôle important.</p>
+
+    <h3>2. Présentation de l'entreprise</h3>
+    <p>Vaadigm Studio est une agence web créative implantée à Paris. Elle accompagne ses clients dans la conception, le développement et la mise en ligne de sites web sur mesure. Son positionnement est axé sur le design soigné et les solutions digitales adaptées aux besoins de chaque client.</p>
+    <p>L'équipe est composée d'une dizaine de personnes : développeurs, designers et chefs de projet. Malgré la taille relativement modeste de la structure, l'agence gère plusieurs projets en parallèle et travaille pour des clients variés.</p>
+    <p>Ce qui m'a frappé dès les premiers jours, c'est la cohésion qui règne au sein de l'équipe. Tout le monde se connaît bien, les échanges sont naturels, et il y a une vraie entraide entre les membres. Personne n'est laissé de côté, que ce soit un collaborateur en difficulté sur un bug ou un stagiaire comme moi qui ne comprend pas encore tout.</p>
+    <p>Cette ambiance de travail positive est, selon moi, l'un des points forts de Vaadigm Studio. Elle favorise la concentration, la créativité et l'envie de bien faire les choses.</p>
+
+    <h3>3. Organisation et déroulement du stage</h3>
+    <p>Chaque début de semaine, l'équipe se réunissait pour faire le point sur l'avancement des projets en cours, identifier les priorités et répartir les tâches. Ces réunions courtes mais efficaces donnaient un cap clair à toute l'équipe pour la semaine.</p>
+    <p>En tant que stagiaire, j'assistais à ces réunions et prenais des notes. C'était une façon très concrète de comprendre comment fonctionne la gestion de projet dans une agence web réelle : on ne travaille pas au hasard, chaque action est planifiée et discutée collectivement.</p>
+    <p>Au quotidien, chaque développeur travaillait sur ses projets de manière assez autonome, tout en restant disponible pour les autres. Les échanges se faisaient naturellement, sans rigidité. C'est ce mélange d'organisation et de souplesse qui m'a le plus surpris — et inspiré.</p>
+
+    <h3>4. Les missions confiées</h3>
+    <p>Lors de mes premiers jours de stage, j'ai principalement observé. Mon maître de stage Nataniel et les autres développeurs m'ont expliqué le fonctionnement de l'agence, les projets en cours et les outils utilisés.</p>
+    <p>J'ai eu la chance d'observer en détail la création d'un site web complet, depuis les premières lignes de code jusqu'au déploiement final. Voir comment un site prend forme progressivement — comment la structure HTML se construit, comment le CSS donne du style, comment tout s'assemble — m'a vraiment aidé à visualiser ce que j'apprenais en cours de manière abstraite.</p>
+    <p>Cette phase d'observation était essentielle. Elle m'a permis de comprendre les réflexes et les méthodes de travail des professionnels, et d'entrer dans le stage avec une base concrète avant de passer à la pratique.</p>
+    <p>Dans un second temps, j'ai eu l'opportunité de créer mon propre site web. Cette mission m'a été confiée pour me permettre de mettre en pratique ce que j'avais observé et d'explorer les outils de l'agence par moi-même.</p>
+    <p>J'ai travaillé sur WordPress et appris à configurer l'hébergement via OVH. Les collègues m'aidaient dès que je bloquais sur quelque chose — ils prenaient le temps de m'expliquer, sans jamais me faire sentir que mes questions étaient dérangeantes.</p>
+    <p>Cette expérience m'a montré que créer un site, c'est beaucoup plus qu'écrire du code. C'est penser à l'utilisateur, à la lisibilité, à la structure, aux performances. Chaque décision compte.</p>
+
+    <h3>5. Les outils et technologies utilisés</h3>
+    <ul>
+      <li><strong>WordPress</strong> — CMS utilisé pour la création et la gestion de sites web. J'ai appris à installer WordPress, configurer des thèmes et personnaliser des pages.</li>
+      <li><strong>OVH</strong> — Plateforme d'hébergement web. J'ai découvert comment configurer un hébergement, relier un domaine à un site et gérer les fichiers en ligne.</li>
+      <li><strong>HTML / CSS</strong> — Langages de base pour la structure et le style des pages web. Les voir utilisés dans un contexte professionnel m'a donné une tout autre perspective.</li>
+      <li><strong>Outils de communication interne</strong> — L'équipe utilisait des outils collaboratifs pour partager les informations et suivre l'avancement des projets.</li>
+    </ul>
+
+    <h3>6. Ce que ce stage m'a apporté</h3>
+    <p>Ce stage m'a permis de consolider des compétences que j'avais commencé à développer en cours, notamment sur WordPress et l'hébergement web. Mais surtout, il m'a appris à comprendre le lien entre toutes ces technologies — comment elles s'articulent pour former un produit fini.</p>
+    <p>Voir des professionnels coder, faire des choix techniques, déboguer et déployer un site en conditions réelles est infiniment plus formateur que de lire un cours. On comprend pourquoi les choses sont faites d'une certaine façon, et pas seulement comment.</p>
+    <p>Au-delà du technique, ce stage m'a beaucoup apporté sur le plan humain. J'ai appris à évoluer dans un environnement professionnel, à prendre ma place dans une équipe sans imposer mes idées, à poser des questions sans hésiter, et à accepter les remarques pour progresser.</p>
+    <p>La cohésion de l'équipe de Vaadigm Studio m'a montré que travailler dans un bon état d'esprit, ça change tout. Les gens se soutiennent, partagent leurs connaissances et avancent ensemble. C'est un modèle de fonctionnement que j'espère retrouver dans ma future carrière.</p>
+    <p>Si j'avais encore un doute sur la voie que je voulais prendre, ce stage l'a effacé. Le développement web est vraiment le domaine dans lequel je veux évoluer. J'aime la rigueur que ça demande, la créativité que ça permet, et la satisfaction de voir quelque chose fonctionner après avoir travaillé dessus.</p>
+
+    <h3>7. Conclusion</h3>
+    <p>Ce stage d'un mois chez Vaadigm Studio a été une expérience vraiment enrichissante, aussi bien sur le plan technique qu'humain. J'ai eu la chance d'intégrer une équipe professionnelle, soudée et bienveillante, qui m'a accordé sa confiance et m'a permis de progresser dans un cadre stimulant.</p>
+    <p>J'ai pu observer et comprendre comment fonctionne concrètement une agence web, de la planification des projets jusqu'au déploiement des sites. J'ai pratiqué des outils comme WordPress et OVH, et j'ai surtout appris à adapter ma façon de travailler à un environnement professionnel réel.</p>
+    <p>Cette expérience m'a conforté dans mes choix d'orientation. Je souhaite poursuivre dans le développement web et continuer à apprendre, que ce soit en formation ou en alternance. Vaadigm Studio m'a donné un bel aperçu de ce que ce métier peut offrir, et j'en suis reconnaissant.</p>
+  </details>
+</section>
+
+<section id="e5">
+  <h2>Épreuve E5</h2>
+  <p class="sous-titre">Production et fourniture de services informatiques.</p>
+  <div class="carte">
+    <p>L'épreuve E5 consiste à présenter des réalisations faites en formation ou en stage, avec les documents qui les accompagnent. Mes réalisations :</p>
+    <ul class="coches">
+      <li>Projet M2L en Java, en groupe (ma partie : le MCD et le script SQL)</li>
+      <li>Projet Parking en Laravel, en groupe</li>
+      <li>Mon site réalisé pendant le stage chez Vaadigm Studio</li>
+    </ul>
+  </div>
+</section>
+
+<section id="veille">
+  <h2>Veille technologique</h2>
+  <p class="sous-titre">Thème : l'intelligence artificielle dans le développement web.</p>
+  <div class="grille">
+    <div class="carte"><h3>Feedly</h3><p>Regroupe mes sources d'actualité dans un seul flux.</p></div>
+    <div class="carte"><h3>Google Alerts</h3><p>Alertes sur des mots-clés comme « intelligence artificielle » ou « développement web ».</p></div>
+    <div class="carte"><h3>Sites spécialisés</h3><p>Developpez.com et Le Journal du Net pour suivre les tendances.</p></div>
+    <div class="carte"><h3>YouTube et LinkedIn</h3><p>Tutoriels, démonstrations d'outils et suivi de professionnels de l'informatique.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="sous-titre">Mon CV, ma lettre de motivation et mes coordonnées.</p>
+  <div class="carte">
+    <a class="btn" href="https://drive.google.com/file/d/1HdKbDwcJ1Nbh4Bg1PsW_C3LHhGaHuIKt/view?usp=sharing" target="_blank" rel="noopener">Mon CV</a>
+    <a class="btn" href="https://drive.google.com/file/d/12H29OGbVoGudc-abgHRfIdvSc6UOLzF4/view?usp=sharing" target="_blank" rel="noopener">Ma lettre de motivation</a>
+    <p>E-mail : <a href="mailto:kanrazmo94@gmail.com">kanrazmo94@gmail.com</a><br>
+    Téléphone : <a href="tel:+33680725643">06 80 72 56 43</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>© <span id="annee"></span> Ibrahima Kan · BTS SIO option SLAM</footer>
+
+<script>document.getElementById("annee").textContent = new Date().getFullYear();</script>
+</body>
+</html>
